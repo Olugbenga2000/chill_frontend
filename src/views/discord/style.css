@@ -1,0 +1,621 @@
+div.discordContainer {
+    position:relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f8f8f8;
+    /* border: 1px 2px solid black; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+header {
+    height: 64px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header > h3 {
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+
+div.discordBody {
+    box-shadow: 0px 5px 27px #00000029;
+    margin-top: 2.2rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 520px;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+div.discordBody > p {
+    font-weight: 200;   
+    font-size: 15px;
+    margin: 20px 0 10px;
+}
+div.discordTimeline {
+    position: relative;
+    max-width: 90%;
+    margin: 0 auto 3.7rem;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+
+div.discordTimeline > .columnD {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+div.discordTimeline > .columnD > span {
+    margin-top: 5px;
+    color: grey;
+    font-size: 12px;
+}
+
+
+div.discordTimeline > .columnD > i{
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 20px;
+    background-color: #c1c1c1;
+    font-size: 11px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+div.discordTimeline > .columnD > i.first, div.discordTimeline > .columnD > i.second {
+    background-color: #559400;
+}
+
+div.discordTimeline > .columnD > span.first, div.discordTimeline > .columnD > span.second {
+    color : #559400;
+}
+
+div.discordTimeline > .columnD > i.first::after {
+    content: '';
+    position: absolute;
+    width:  43%;
+    height: 4px;
+    background-color: #559400;
+    left: 8.5%;
+    top: 8px;
+    bottom: 0;
+    z-index: 1;
+
+}
+
+div.discordTimeline > .columnD > i.second, div.discordTimeline > .columnD > i.third, div.discordTimeline > .columnD > i.first {
+    z-index: 2;
+}
+div.discordTimeline > .columnD > i.second::after {
+    content: '';
+    position: absolute;
+    width: 42%;
+    height: 4px;
+    background-color: #559400;
+    left: 54%;
+    top: 8px;
+    bottom: 0;
+}
+
+div.bdiscord {
+    width: 70px;
+    height: 70px;
+    border-radius: 35px;
+    -webkit-border-radius: 35px;
+    -moz-border-radius: 35px;
+    -ms-border-radius: 35px;
+    -o-border-radius: 35px;
+    background-color: #5865f2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    margin-bottom: 2.5rem;
+}
+
+div.bdiscord > i {
+    font-size: 37px;
+}
+
+div.dcenterP {
+    width: 100%;
+    line-height: 1.3rem;
+    letter-spacing: 0.6px;
+    display: flex;
+    margin: 0 auto 3rem;
+    justify-content: space-around;
+    align-items: center;
+}
+
+div.dcenterP > h3 {
+    align-content: center;
+    width: 80%;
+    font-weight: 400;
+    font-size: 19px;
+}
+
+
+div.discordSigninB {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 75%;
+    height: 60px;
+    color: white;
+    background-color: #5865f2;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+    margin-bottom: 2rem;
+}
+
+div.discordSigninB > i {
+    font-size : 20px;
+}
+div.discordSigninB > h4 {font-weight: normal;
+    font-size: 21px;
+
+}
+
+div > h3.dfooter {
+    margin-bottom: 20px;
+    margin-top: 50px;
+    color: #ff9a00;
+    letter-spacing: 1px;
+}
+
+@media  (min-width: 420px) {
+    
+    div.discordBody {
+        height: 550px;
+    }
+
+    div.discordTimeline > .columnD > i{
+        width: 25px;
+        border-radius: 12.5px;
+        height: 25px;
+        -webkit-border-radius: 12.5px;
+        -moz-border-radius: 12.5px;
+        -ms-border-radius: 12.5px;
+        -o-border-radius: 12.5px;
+}
+    div.discordTimeline > .columnD > i.first::after {
+        height: 5px;
+        left: 7.5%;
+    top: 9.5px;
+
+    }
+    div.discordTimeline > .columnD > i.second::after {
+        height: 5px;
+        left: 53%;
+    top: 9.5px;
+
+    }
+
+    div.bdiscord {
+        width: 80px;
+        height: 80px;
+        border-radius: 40px;
+        -webkit-border-radius: 40px;
+        -moz-border-radius: 40px;
+        -ms-border-radius: 40px;
+        -o-border-radius: 40px;
+    }
+    
+    div.bdiscord > i {
+        font-size: 40px;
+}
+
+div.dcenterP > h3 {
+    font-size: 25px;
+    line-height: 1.5rem;
+}
+
+div.discordSigninB > i {
+    font-size : 28px;
+}
+div.discordSigninB > h4 {font-weight: normal;
+    font-size: 22px;
+
+}
+
+div > h3.dfooter {
+    margin-bottom: 25px;
+    margin-top: 35px;
+    font-size: 30px;
+}
+
+}
+@media  (min-width: 480px) {
+
+    header > h3 {
+        font-weight: 500;
+        font-size: 26px;
+    }
+
+        div.discordTimeline > .column > i {
+            width: 30px;
+            border-radius: 15px;
+            height: 30px;
+            font-size: 12px;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            -ms-border-radius: 15px;
+            -o-border-radius: 15px;
+}
+        
+        div.discordTimeline > .column > i.first::after {
+            height: 6px;
+            top: 12px;
+        }
+        div.discordTimeline > .column > i.second::after {
+            height: 6px;
+            top: 12px;
+        }
+
+        div.bdiscord {
+            width: 80px;
+            height: 80px;
+            border-radius: 40px;
+            -webkit-border-radius: 40px;
+            -moz-border-radius: 40px;
+            -ms-border-radius: 40px;
+            -o-border-radius: 40px;
+            margin-bottom: 1rem;
+}
+
+div.bdiscord > i {
+    font-size: 42px;
+}
+
+        div.dcenterP > h3 {
+            margin-top: 3rem;
+            width: 65%;
+            font-size: 26px;
+        }
+
+        div.discordSigninB  {
+            width: 70%;
+        }
+        div.discordSigninB > h4 {
+            font-size: 28px;
+        
+        }
+    }
+
+    @media  (min-width: 530px) {
+        div.discordBody {
+            height: 650px;
+        }
+    
+        div.discordTimeline > .columnD > i{
+            width: 30px;
+            border-radius: 15px;
+            height: 30px;
+            -webkit-border-radius: 15px;
+            -moz-border-radius: 15px;
+            -ms-border-radius: 15px;
+            -o-border-radius: 15px;
+            font-size: 16px;
+}
+        div.discordTimeline > .columnD > i.first::after {
+            height: 6px;
+            left: 6.5%;
+        top: 11.5px;
+    
+        }
+        div.discordTimeline > .columnD > i.second::after {
+            height: 6px;
+            left: 53%;
+        top: 11.5px;
+    
+        }
+    
+        div.bdiscord {
+            width: 90px;
+            height: 90px;
+            border-radius: 45px;
+            -webkit-border-radius: 45px;
+            -moz-border-radius: 45px;
+            -ms-border-radius: 45px;
+            -o-border-radius: 45px;
+            margin-bottom: 3rem;
+}
+        
+        div.bdiscord > i {
+            font-size: 43px;
+    }
+    
+    div.dcenterP > h3 {
+        font-size: 26px;
+        margin-left:1.5rem;
+        line-height: 1.5rem;
+        /* margin-bottom: 1rem; */
+    }
+    div.discordSigninB {
+        height: 67px;
+        width: 65%;
+    }
+
+    div.discordSigninB > i {
+        font-size : 22px;
+    }
+    div.discordSigninB > h4 {font-weight: normal;
+        font-size: 24px;
+    
+    }
+    
+    div > h3.dfooter {
+        margin-bottom: 25px;
+        margin-top: 35px;
+        font-size: 30px;
+    }
+    }
+
+    @media  (min-width: 560px) {
+        div.discordBody {
+            height: 700px;
+            width: 80%;
+        }
+    }
+
+      /*  TABLET  VIEW */
+
+      @media  (min-width: 768px) {
+
+        div.discordTimeline > .columnD > i {
+            width: 40px;
+            border-radius: 20px;
+            height: 40px;
+            font-size: 12.5px;
+            -webkit-border-radius: 20px;
+            -moz-border-radius: 20px;
+            -ms-border-radius: 20px;
+            -o-border-radius: 20px;
+            font-size: 19px;
+}
+        
+        div.discordTimeline > .columnD> i.first::after {
+            /* left: 7%; */
+            height: 7px;
+            top: 19px;
+        }
+        div.discordTimeline > .columnD >  i.second::after {
+            height: 7px;
+            top: 19px;
+        }
+        
+        div.dcenterP {
+            width: 100%;
+            display: flex;
+        }
+        div.dcenterP > h3 {
+            font-size: 19px;
+        }
+
+        div.discordSigninB {
+            width: 50%;
+        }
+
+        div.discordSigninB > h4 {
+            font-size: 23px;
+        
+        }
+      }
+
+        /*  Lab-Top screen */
+          @media  (min-width: 850px) {
+        
+        header {
+            height: 60px;
+        }
+        
+        header > h3.title {
+            font-weight: 300;
+            font-size: 40px;
+        }
+        
+        header > i {
+            font-size: 50;
+        }
+        
+        div.discordTimeline {
+            display: flex;
+            width: 100%;
+            justify-content: space-between;
+            align-items: center;
+            color: white;
+        }
+        div.discordBody {
+            height: 700px;
+        }
+        div.discordTimeline > .columnD > span {
+            margin-top: 10px;
+            color: grey;
+            font-size: 19px;
+        }
+        
+        
+        div.discordTimeline > .columnD > i{
+            width: 50px;
+            border-radius: 25px;
+            height: 50px;
+            font-size: 28px;
+            -webkit-border-radius: 25px;
+            -moz-border-radius: 25px;
+            -ms-border-radius: 25px;
+            -o-border-radius: 25px;
+}
+                
+        div.discordTimeline > .columnD > i.first::after {
+            height: 8px;
+            top: 23px;
+        }
+        div.discordTimeline > .columnD > i.second::after {
+            height: 8px;
+            top: 23px;
+        }
+        
+        div.bdiscord {
+            width: 90px;
+            height: 90px;
+            border-radius: 45px;
+            -webkit-border-radius: 45px;
+            -moz-border-radius: 45px;
+            -ms-border-radius: 45px;
+            -o-border-radius: 45px;
+            margin-bottom: 2.5rem;
+}
+        
+        div.bdiscord > i {
+            font-size: 45px;
+        }
+        
+        div.dcenterP {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+        }
+        
+        div.dcenterP > h3 {
+            font-weight: 400;
+            font-size: 21px
+        }
+        div.discordSigninB {
+            width: 52%;
+            height: 60px;
+            border-radius: 10px;
+            -webkit-border-radius: 10px;
+            -moz-border-radius: 10px;
+            -ms-border-radius: 10px;
+            -o-border-radius: 10px;
+            margin-bottom: 2rem;
+        }
+        
+        div.discordSigninB > i {
+            font-size : 26px;
+        }
+        div.discordSigninB > h4 {font-weight: normal;
+            font-size: 24px;
+        
+        }
+        
+        div > h3.dfooter {
+            margin-bottom: 50px;
+            margin-top: 20px;
+            color: #ff9a00;
+            letter-spacing: 1px;
+        }
+        
+    }
+
+    @media  (min-width: 1000px) {
+        div.discordTimeline > .columnD > i.first::after {
+            height: 8px;
+            top: 23px;
+        }
+        div.discordTimeline > .columnD > i.second::after {
+            height: 8px;
+            top: 23px;
+        }
+
+        div > h3.dfooter {
+            margin-bottom: 10px;
+            margin-top: 50px;
+        }
+
+    }
+      
+
+    @media  (min-width: 1440px) {
+
+        header {
+            height: 70px;
+            width: 100%;
+            justify-content: center;
+            align-items: center;
+        }
+
+        header > i {
+            margin-right: 4rem;
+        }
+        div.discordTimeline > .columnD > i.first::after {
+            width: 50%;
+            height: 10px;
+            left: 4%;
+            top: 22px;
+        }
+        div.discordTimeline > .columnD > i.second::after {
+            width: 47%;
+            height: 10px;
+            left: 52%;
+            top: 22px;
+        }
+
+        div > h3.dfooter {
+            margin-bottom: 10px;
+            margin-top: 50px;
+        }
+
+        div.discordSigninB  {
+            width: 40%;
+        }
+        div.discordSigninB > i {
+            font-size : 30px;
+        }
+        div.discordSigninB > h4 {font-weight: normal;
+            font-size: 28px;
+        
+        }
+
+        div.dcenterP > h3 {
+            font-size: 25px
+        }
+
+    }
+
+    @media  (min-width: 1160px) {
+        div.discordBody {
+            max-width: 70%;
+        }
+        header {
+            padding: 0 250px;
+        }
+
+        header > h3.title {
+            font-weight: 300;
+            font-size: 42px;
+        }
+
+    }
+      

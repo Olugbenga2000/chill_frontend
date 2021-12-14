@@ -1,0 +1,316 @@
+div.verifiedContainer {
+    position:relative;
+    min-height: 100vh;
+    width: 100%;
+    background-color: #f8f8f8;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    height: 64px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+header > h3 {
+    font-weight: 300;
+    font-size: 1.3rem;
+}
+
+div.verifyBody {
+    box-shadow: 0px 5px 27px #00000029;
+    margin-top: 2.2rem;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    height: 550px;
+    width: 90%;
+    align-items: center;
+    justify-content: start;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+div.verifyBody > p {
+    margin: 10px auto 15px;
+}
+
+div.verifyTimeline {
+    position: relative;
+    max-width: 90%;
+    margin: 0 auto 3.7rem;
+}
+
+div.verifyTimeline {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+}
+
+div.verifyTimeline > .columnV {
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    
+}
+
+div.verifyTimeline > .columnV > span {
+    margin-top: 5px;
+    color: grey;
+    font-size: 12px;
+}
+
+
+div.verifyTimeline > .columnV > i{
+    width: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 20px;
+    background-color: #c1c1c1;
+    font-size: 11px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+div.verifyTimeline > .columnV > i.first, div.verifyTimeline > .columnV > i.second, div.verifyTimeline > .columnV > i.third {
+    background-color: #559400;
+}
+
+div.verifyTimeline > .columnV > span.first, div.verifyTimeline > .columnV > span.second, div.verifyTimeline > .columnV > span.third {
+    color : #559400;
+}
+
+div.verifyTimeline > .columnV > i.first::after {
+    content: '';
+    position: absolute;
+    width:  9rem;
+    height: 5px;
+    background-color: #559400;
+    left: 8.6%;
+    top: 8px;
+    bottom: 0;
+    z-index: 1;
+
+}
+
+div.verifyTimeline > .columnV > i.first, div.verifyTimeline > .columnV > i.third, div.verifyTimeline > .columnV > i.second {
+    z-index: 3;
+}
+div.verifyTimeline > .columnV > i.second::after {
+    content: '';
+    position: absolute;
+    width: 43%;
+    height: 5px;
+    background-color: #559400;
+    left: 53.5%;
+    top: 8px;
+    bottom: 0;
+    z-index: 1;
+
+}
+
+div.body {
+    width: 75%;
+}
+
+div.body > h2 {
+    font-size: 19px;
+    font-weight: 300;
+    margin-bottom: 4rem;
+    
+}
+
+div.verifySigninB {
+    height: 50px;
+    width: 80%;
+    background-color: #ff9a00;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+div.verifySigninB > h4 {
+font-size: 18px;
+letter-spacing: 1px;
+font-weight: 600;
+}
+
+@media  (min-width: 420px) {
+
+    div.verifyTimeline > .columnV > i{
+        width: 30px;
+        border-radius: 15px;
+        height: 30px;
+        background-color: #c1c1c1;
+        font-size: 13px;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        -ms-border-radius: 15px;
+        -o-border-radius: 15px;
+}
+
+div.verifyTimeline > .columnV > i.first::after {
+    /* width:  46%; */
+    height: 7px;
+    top: 11px;
+    left: 6.8%;
+
+}
+
+div.verifyTimeline > .columnV > i.second::after {
+    width:  45.5%;
+    height: 7px;
+    left: 53%;
+    top: 11px;
+}
+
+
+div.body {
+    width: 80%;
+}
+
+div.body > h2 {
+    font-size: 24px;
+    margin-bottom: 4rem;
+    
+}
+
+
+div.verifySigninB {
+    height: 50px;
+    width: 60%;
+}
+
+div.verifySigninB > h4 {
+    font-size: 22px;
+    }
+}
+
+@media  (min-width: 464px) {
+
+    div.verifyTimeline > .columnV > i.first::after {
+        width:  47%;
+    
+    }
+    
+    div.verifyTimeline > .columnV > i.second::after {
+        width:  46%;
+    }
+}
+
+
+@media  (min-width: 750px) {
+
+    div.verifyTimeline > .columnV  > i {
+        width: 60px;
+        border-radius: 30px;
+        height: 60px;
+        font-size: 29px;
+        -webkit-border-radius: 30px;
+        -moz-border-radius: 30px;
+        -ms-border-radius: 30px;
+        -o-border-radius: 30px;
+}
+
+div.verifyTimeline > .columnV  > span {
+    font-size: 22px;
+}
+    header > h3.title {
+        font-size: 30px;
+    }
+    div.verifyTimeline > .columnV > i.first::after {
+        width:  16rem;
+        height: 10px;
+        top: 26px;
+        left: 10%;
+    }
+    div.verifyTimeline > .columnV > i.second::after {
+        width:  16rem;
+        height: 10px;
+        top: 26px;
+        left: 53.5%;
+    }
+    
+    div.body {
+        width: 80%;
+    }
+    
+    div.body > h2 {
+        font-size: 30px;
+        
+    }
+}
+
+@media  (min-width: 786px) {
+    div.verifyBody {
+        max-width: 72.5%;
+    }
+}
+
+@media  (min-width: 1002px) {
+
+    div.verifyTimeline > .columnV > i.first::after {
+        width:  20rem;
+        left: 8%;
+    }
+    div.verifyTimeline > .columnV > i.second::after {
+        width:  20rem;
+    }
+    div.verifyBody {
+        max-width: 80%;
+    }
+}
+
+@media  (min-width: 1102px) {
+
+    div.verifyTimeline > .columnV > i.first::after {
+        width:  25rem;
+        left: 7%;
+    }
+    div.verifyTimeline > .columnV > i.second::after {
+        width:  25rem;
+        left: 52.3%;
+    }
+    div.verifyBody {
+        max-width: 80%;
+    }
+}
+
+
+@media  (min-width: 1160px) {
+    div.verifyBody {
+        max-width: 70%;
+    }
+    header {
+        padding: 0 250px;
+    }
+
+    header > h3.title {
+        font-weight: 300;
+        font-size: 42px;
+    }
+
+}
+  
